@@ -1,25 +1,27 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
-const subscriberSchema = new mongoose.Schema({
-    _id: {
-      type: Number,
-      required: true,
-    },
+const subscriberSchema = new mongoose.Schema(
+	{
+		_id: {
+			type: Number,
+			required: true,
+		},
 
-    name: {
-      type: String,
-      required: true,
-    },
+		name: {
+			type: String,
+			required: true,
+		},
 
-    age: {
-      type: Number,
-      required: true,
-    }
-  },
-  {
-    collection: 'testcollection'
-  })
-  
-const User = mongoose.model("User", subscriberSchema)
+		age: {
+			type: Number,
+			required: true,
+		},
+	},
+	{
+		collection: 'testcollection',
+	}
+);
 
-module.exports = User
+const User = mongoose.model('User', subscriberSchema);
+
+module.exports = User;
